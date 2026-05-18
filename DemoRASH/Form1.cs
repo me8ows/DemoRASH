@@ -1,3 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
 namespace DemoRASH
 {
     public partial class Auth : Form
@@ -7,14 +19,8 @@ namespace DemoRASH
             InitializeComponent();
         }
 
-        private void labelName_Click(object sender, EventArgs e)
-        {
+        static string connectionString = @"Data Source=rashid;Integrated Security=True;TrustServerCertificate=True";
+        SqlConnection RashConnection = new SqlConnection(connectionString);
 
-        }
-
-        private void passwordLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
